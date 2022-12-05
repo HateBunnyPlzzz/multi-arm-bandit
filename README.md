@@ -118,13 +118,12 @@ Below is the handwritten notebook explaining solution to MABP using action-value
 
 This approach can be implemented as follows:
 
-1. Select a real number ![\epsilon](https://aleksandarhaber.com/wp-content/ql-cache/quicklatex.com-729568734d87ffb0f88cf42b1bc6828a_l3.svg) large than ![0](https://aleksandarhaber.com/wp-content/ql-cache/quicklatex.com-a5e437be25f29374d30f66cd46adf81c_l3.svg) and smaller than ![1](https://aleksandarhaber.com/wp-content/ql-cache/quicklatex.com-4868771cbc422b5818f85500909ce433_l3.svg)
-2. Draw a random value ![p](https://aleksandarhaber.com/wp-content/ql-cache/quicklatex.com-3bf85f1087e9fbed3a319341134ac1a2_l3.svg) from the uniform distribution on the interval ![0](https://aleksandarhaber.com/wp-content/ql-cache/quicklatex.com-a5e437be25f29374d30f66cd46adf81c_l3.svg) to ![1](https://aleksandarhaber.com/wp-content/ql-cache/quicklatex.com-4868771cbc422b5818f85500909ce433_l3.svg).
-3. If ![p>\epsilon](https://aleksandarhaber.com/wp-content/ql-cache/quicklatex.com-06ab78173defd8a660fdc0b175b6d24f_l3.svg), then select the actions by maximizing ([6](https://aleksandarhaber.com/multi-armed-bandit-with-python-codes-and-implementation/#id3452518675)).
-4. If ![p\le \epsilon](https://aleksandarhaber.com/wp-content/ql-cache/quicklatex.com-a5fe8682f7b4c13ce3613434caa37789_l3.svg), then randomly select an action. That is randomly pick any ![a_{j}](https://aleksandarhaber.com/wp-content/ql-cache/quicklatex.com-12f56e367a82a8da5bfd5dd6a96ab5c0_l3.svg) from the set of all possible actions ![\{a_{1},a_{2},\ldots, a_{N} \}](https://aleksandarhaber.com/wp-content/ql-cache/quicklatex.com-ed59bee83944e72c49aa81ea50ae43e3_l3.svg), and apply them to the system.
+1. Select a real number Epsilon large than 0 and smaller than 1.
+2. Draw a random value *p* from the uniform distribution on the interval 0 to 1.
+3. If *p > epsilon*, then select the actions by maximising *Amax* Equation.
+4. If *p<= epsilon*, then randomly select an action. That is randomly pick any *a(j)* from the set of all possible actions *{a1, a2, a3, ..., an}*, and apply them to the system.
 
 That is basically it. This was a brief description of the solution of the multi-arm bandit problem.
-
 
 
 ~~~python
