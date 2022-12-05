@@ -13,7 +13,8 @@ The task is to identify which lever to pull in order to get maximum reward after
 ### Exploration Exploitation in the context of  Bernoulli MABP
 The below table shows the sample results for a 5-armed Bernoulli bandit with arms labelled as 1, 2, 3, 4 and 5:
 
-![img](https://cdn.analyticsvidhya.com/wp-content/uploads/2018/09/im_34.png)
+![image](https://user-images.githubusercontent.com/82467675/205731113-5269898f-9676-4820-92c8-89a0338e9df3.png)
+
 
 This is called Bernoulli, as the reward returned is either 1 or 0. In this example, it looks like the arm number 3 gives the maximum return and hence one idea is to keep playing this arm in order to obtain the maximum reward (pure exploitation).
 
@@ -269,6 +270,9 @@ plt.savefig('results.png',dpi=300)
 plt.show()
 ~~~
 
+The code is self-explanatory. We basically create 4 problems for 4 different values of epsilon and we simulate them, and plot the results. 
+The Results for the above experiments are shown in the figure below:
+![image](https://user-images.githubusercontent.com/82467675/205731392-cfe20f34-0c48-4ce4-9a21-59abba3284e6.png)
 
 
 The above code simulates the MABP solution using the action-value function on a sample (custom) dataset ***actionValues=np.array([1,4,2,0,7,1,-1])***
